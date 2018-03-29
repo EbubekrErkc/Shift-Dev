@@ -3,17 +3,6 @@ const moment = require("moment");
 require("moment-duration-format");
 const client = new Discord.Client();
 
-const http = require('http');
-const express = require('express');
-const app = express();
-app.get("/", (request, response) => {
-  console.log(Date.now() + " Ping Received");
-  response.sendStatus(200);
-});
-app.listen(process.env.PORT);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
 
 client.on("ready", () => {
   client.user.setActivity(`+Help`)
@@ -38,7 +27,7 @@ client.on("message", async message => {
   .addField('Shift Statistics', 'Here Are My Statistics')
   .addField('» Memory Usage', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`)
   .addField('» Uptime', `${duration}`)
-  .addField('» Bot Version', `${process.env.VERSION}`)
+  .addField('» Bot Version', `0.0.1`)
   .addField('» Node', `9.8.0`)
   .addField('» Library', `Discord.JS`)
   .setColor(`E9D700`)
