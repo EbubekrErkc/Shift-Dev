@@ -1,0 +1,26 @@
+{
+  "name": "shift-dev",
+  "version": "0.0.1",
+  "description": "This Is Official Development Version Of Shift Bot",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "discord.js": "^11.3.2",
+    "moment": "^2.21.0",
+    "moment-duration-format": "^2.2.2"
+  },
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/my-glitch-app"
+  },
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
