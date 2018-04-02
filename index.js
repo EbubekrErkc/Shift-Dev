@@ -24,7 +24,7 @@ client.on("message", async message => {
   if (command === 'stats') {
   const duration = moment.duration(client.uptime).format(" D [Days], H [Hours], m [Minutes], s [Seconds]");
   const embed = new Discord.RichEmbed()
-  .addField('Shift Statistics', 'Here Are My Statistics')
+  .addField('Kyros Statistics', 'Here Are My Statistics')
   .addField('» Memory Usage', `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB`)
   .addField('» Uptime', `${duration}`)
   .addField('» Bot Version', `0.0.1`)
@@ -36,7 +36,7 @@ client.on("message", async message => {
   
   if (command === 'help') {
   const embed = new Discord.RichEmbed()
-  .addField('Shift Commands', 'Here Are My Commands')
+  .addField('Command List', 'Here Are My Commands')
   .addField('Information', 'Ping - Measures The Bot Latency\n\nStats - Gives Some Bot Statistics')
   message.channel.send({embed});
   }
