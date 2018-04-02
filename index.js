@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const moment = require("moment");
 require("moment-duration-format");
+const Webhook = require("webhook-discord")
+
+const Hook = new Webhook("https://discordapp.com/api/webhooks/430421933515997215/nAmQcEgMVYrCY8Mga8OB7lHcOzb0ratHVUmD1W9JYL9KkzWbajDS_PVdDEi5_4shVQuN")
 const client = new Discord.Client();
 
 
@@ -41,6 +44,9 @@ client.on("message", async message => {
   message.channel.send({embed});
   }
   
+  if (command === 'change') {
+    Hook.info('Changes', `2+ New Commands\n\nCommunity Category`)
+  }
   });
 
 client.login(process.env.TOKEN)
